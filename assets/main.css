@@ -1,0 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@700&family=Roboto:wght@400;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@layer {
+  :root {
+    font-family: Roboto, sans-serif;
+    @apply m-16;
+  }
+
+  h1 {
+    font-family: 'Roboto Mono', monospace;
+    font-weight: bold;
+  }
+
+
+  code {
+    display: block;
+    white-space: pre;
+  }
+}
