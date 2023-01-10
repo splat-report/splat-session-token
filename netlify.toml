@@ -5,7 +5,7 @@ edge_functions = "./edge-functions"
 
 
 [[redirects]]
-from = "https://session-token-splat-report.netlify.app/*"
+from = "https://*.netlify.app/*"
 to = "https://session-token.splat.report/:splat"
 status = 301
 force = true
