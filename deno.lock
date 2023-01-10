@@ -36,26 +36,10 @@
     "https://edge.netlify.com/bootstrap/retry.ts": "254bdc76bbc74eba3ddc1a6608511ba6e55ca9ceeb8b704d5dde5d69aa300f90",
     "https://edge.netlify.com/bootstrap/site.ts": "92469673f289c124a9985c7027dc6c166364371b209b5a674aa05d482ad5583b",
     "https://edge.netlify.com/bootstrap/stage_2.ts": "aec0414b2abce6b75d6b57f0fedbed9f39479553dc950e0eb54669e589363c1a",
-    "https://edge.netlify.com/bootstrap/util/named_wrapper.ts": "a2b16dc9a8e8fb07509b5cfe29203eebd5bfaafe7589669bae544c8d4d606934"
-  },
-  "npm": {
-    "specifiers": {
-      "crypto-random-string": "crypto-random-string@5.0.0",
-      "rfc4648": "rfc4648@1.5.2"
-    },
-    "packages": {
-      "crypto-random-string@5.0.0": {
-        "integrity": "sha512-KWjTXWwxFd6a94m5CdRGW/t82Tr8DoBc9dNnPCAbFI1EBweN6v1tv8y4Y1m7ndkp/nkIBRxUxAzpaBnR2k3bcQ==",
-        "dependencies": { "type-fest": "type-fest@2.19.0" }
-      },
-      "rfc4648@1.5.2": {
-        "integrity": "sha512-tLOizhR6YGovrEBLatX1sdcuhoSCXddw3mqNVAcKxGJ+J0hFeJ+SjeWCv5UPA/WU3YzWPPuCVYgXBKZUPGpKtg==",
-        "dependencies": {}
-      },
-      "type-fest@2.19.0": {
-        "integrity": "sha512-RAH822pAdBgcNMAfWnCBU3CFZcfZ/i1eZjwFU/dsLKumyuuP3niueg2UAukXYF0E2AAoc82ZSSf9J0WQBinzHA==",
-        "dependencies": {}
-      }
-    }
+    "https://edge.netlify.com/bootstrap/util/named_wrapper.ts": "a2b16dc9a8e8fb07509b5cfe29203eebd5bfaafe7589669bae544c8d4d606934",
+    "https://esm.sh/rfc4648@1.5.2": "3c6eb6a9406d151d86a5ba1a74370c6065998bb6240fd4150a8b5cccc0300b91",
+    "https://esm.sh/v102/rfc4648@1.5.2/deno/rfc4648.js": "32de316d804d9f6150283782ebb9395d31b09a923b099441927529569116387e",
+    "https://esm.sh/v102/rfc4648@1.5.2/lib/src/codec.d.ts": "b85e0cacbcbddaeaed7497fc24c779c06dbe9e1f7e16e1979c120831c92f0c0e",
+    "https://esm.sh/v102/rfc4648@1.5.2/lib/src/index.d.ts": "705c5a29a7050fcc735988665316428cb2bfa678764a4acc5e50533fe5e8ee80"
   }
 }

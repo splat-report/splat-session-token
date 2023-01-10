@@ -1,6 +1,6 @@
 import type { Context } from "https://edge.netlify.com";
 import type { LoginState } from "../composables/nso.ts";
-import { base64url } from 'npm:rfc4648';
+import { base64url } from 'https://esm.sh/rfc4648';
 
 
 
