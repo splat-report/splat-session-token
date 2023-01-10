@@ -11,14 +11,8 @@ function sha256digestOf(x: string) {
 }
 
 function toBase64Url(x: string | Buffer): string {
-  const a = Buffer.from(x).toString("base64url");
-  const b = base64url.stringify(typeof x === 'string' ? new TextEncoder().encode(x) : x, {pad: false});
-  console.info('----------------------------------')
-  console.info(a === b, typeof x);
-  console.info('a', a);
-  console.info('b', b);
-  console.info('-----------------------');
-  return b;
+  // using rfc4648 for Cloudflare compatibility
+  return base64url.stringify(typeof x === 'string' ? new TextEncoder().encode(x) : x, {pad: false});
 }
 
 function generateAuthChallenge() {
