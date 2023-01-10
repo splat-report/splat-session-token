@@ -16,7 +16,7 @@
     </div>
 
     <div>
-      <button @click="fetchSessionToken" :disabled="!state.code">Fetch session token</button>
+      <button @click="fetchSessionToken" :disabled="!state.code" class="button">Fetch session token</button>
     </div>
 
     <p v-if="state.error" class="my-1 text-red-600">
@@ -24,9 +24,11 @@
       * Login url above cannot be reused.
     </p>
 
-    <hr />
-    <div class="opacity-20 hover:opacity-100">
-      <code>{{ JSON.stringify(state, null, 2) }}</code>
+    <div class="float-right">
+      <div v-if="!debug"><button @click="debug = true" class="rounded-md border border-slate-300 hover:bg-slate-100 px-2">show state</button></div>
+      <div v-else="debug">
+        <code>{{ JSON.stringify(state, null, 2) }}</code>
+      </div>
     </div>
   </div>
 </template>
@@ -36,10 +38,10 @@
   @apply border-pink-500 text-pink-500 ring-0;
 }
 
-button {
+.button {
   @apply rounded-md ring-0 text-white font-bold bg-indigo-500 hover:bg-indigo-600 hover:text-slate-100 hover:cursor-pointer;
   @apply disabled:bg-indigo-300 disabled:hover:bg-indigo-400 disabled:hover:cursor-default;
-  @apply py-1 px-2
+  @apply py-1 px-2;
 }
 
 code {
@@ -52,6 +54,8 @@ code {
 const emit = defineEmits<{
   (e: 'token', value: string): void;
 }>();
+
+const debug = ref(false);
 
 const sessionUrlError = computed(() => {
   return sessionUrl.value && !state.code;

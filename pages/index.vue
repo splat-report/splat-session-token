@@ -6,14 +6,14 @@
     <article class="prose">
       <LoginFlow @token="callback" />
 
-      <p class="my-12 max-w-lg">
-        session token:
+      <p class="my-12 max-w-lg" :class="{'opacity-30': !sessionToken}">
+        <h3>session token</h3>
         <span class="float-right">
           <span v-if="!copied" class="material-symbols-outlined opacity-50 hover:cursor-pointer hover:opacity-100"
             @click="copyToken">content_copy</span>
           <span v-else class="text-xs opacity-50">Copied</span>
         </span>
-        <code class="select-all" ref="sessionTokenElem">{{ sessionToken }}</code>
+        <code class="select-all py-2" ref="sessionTokenElem">{{ sessionToken }}</code>
       </p>
     </article>
 

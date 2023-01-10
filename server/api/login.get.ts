@@ -1,6 +1,8 @@
 import { createHash } from "crypto";
 import cryptoRandomString from "crypto-random-string";
 import type { LoginState } from "~~/composables/nso";
+import { base64url } from 'rfc4648';
+
 
 function sha256digestOf(x: string) {
   const sha = createHash("sha256");
@@ -9,7 +11,14 @@ function sha256digestOf(x: string) {
 }
 
 function toBase64Url(x: string | Buffer): string {
-  return Buffer.from(x).toString("base64url");
+  const a = Buffer.from(x).toString("base64url");
+  const b = base64url.stringify(typeof x === 'string' ? new TextEncoder().encode(x) : x, {pad: false});
+  console.info('----------------------------------')
+  console.info(a === b, typeof x);
+  console.info('a', a);
+  console.info('b', b);
+  console.info('-----------------------');
+  return b;
 }
 
 function generateAuthChallenge() {

@@ -1,3 +1,15 @@
 [build]
 
-publish = "./dist"
+publish = "dist"
+
+
+[[redirects]]
+from = "https://session-token-splat-report.netlify.app/*"
+to = "https://session-token.splat.report/:splat"
+status = 301
+force = true
+
+[[headers]]
+  for = "_nuxt/*"
+  [headers.values]
+    Cache-Control = "public, max-age=604800"

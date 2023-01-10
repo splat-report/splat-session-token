@@ -7,6 +7,7 @@ specifiers:
   crypto-random-string: ^5.0.0
   nuxt: ^3.0.0
   postcss: ^8.4.21
+  rfc4648: ^1.5.2
   tailwindcss: ^3.2.4
 
 devDependencies:
@@ -16,6 +17,7 @@ devDependencies:
   crypto-random-string: 5.0.0
   nuxt: 3.0.0
   postcss: 8.4.21
+  rfc4648: 1.5.2
   tailwindcss: 3.2.4_postcss@8.4.21
 
 packages:
@@ -3928,6 +3930,10 @@ packages:
   /reusify/1.0.4:
     resolution: {integrity: sha512-U9nH88a3fc/ekCF1l0/UP1IosiuIjyTh7hBvXVMHYgVcfGvt897Xguj2UOLDeI5BG2m7/uwyaLVT6fbtCwTyzw==}
     engines: {iojs: '>=1.0.0', node: '>=0.10.0'}
+    dev: true
+
+  /rfc4648/1.5.2:
+    resolution: {integrity: sha512-tLOizhR6YGovrEBLatX1sdcuhoSCXddw3mqNVAcKxGJ+J0hFeJ+SjeWCv5UPA/WU3YzWPPuCVYgXBKZUPGpKtg==}
     dev: true
 
   /rimraf/3.0.2:
