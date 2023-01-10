@@ -1,6 +1,6 @@
 .PHONY: dev
 dev: node_modules/.modules.yaml
-	npm run dev
+	BROWSER=none npx netlify-cli dev
 
 
 

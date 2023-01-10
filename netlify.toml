@@ -1,6 +1,7 @@
 [build]
 
 publish = "dist"
+edge_functions = "./edge-functions"
 
 
 [[redirects]]
@@ -13,3 +14,17 @@ force = true
   for = "_nuxt/*"
   [headers.values]
     Cache-Control = "public, max-age=604800"
+
+[[headers]]
+  for = "/api/*"
+  [headers.value]
+    Allow- = "*"
+
+
+[[edge_functions]]
+path = "/api/login"
+function = "login"
+
+[[edge_functions]]
+path = "/api/token"
+function = "token"

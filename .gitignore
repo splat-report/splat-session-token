@@ -8,3 +8,6 @@ node_modules
 dist
 
 /functions
+
+# Local Netlify folder
+.netlify

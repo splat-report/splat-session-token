@@ -1,7 +1,0 @@
-name = "splat-session-token"
-main = "./.output/server/index.mjs"
-workers_dev = true
-compatibility_date = "2023-01-10"
-
-[site]
-bucket = ".output/public"

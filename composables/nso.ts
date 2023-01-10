@@ -56,7 +56,7 @@ function extractSessionTokenCodeFromUrl(sessionUrl: string) {
 
 const fetchSessionToken = (state: LoginState) => async () => {
   state.error = "";
-  const { data, error } = await useFetch<LoginState>("/api/login", {
+  const { data, error } = await useFetch<LoginState>("/api/token", {
     method: "POST",
     body: state,
   });
