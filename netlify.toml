@@ -10,6 +10,13 @@ to = "https://session-token.splat.report/:splat"
 status = 301
 force = true
 
+[[redirects]]
+from = "https://main--session-token-splat-report.netlify.app/*"  # [main] is a branch name
+to = "https://session-token.splat.report/:splat"
+status = 301
+force = true
+
+
 [[headers]]
   for = "_nuxt/*"
   [headers.values]
