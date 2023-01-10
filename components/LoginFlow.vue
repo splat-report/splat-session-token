@@ -17,6 +17,7 @@
     </div>
 
     <div>
+      <h3>Session Token</h3>
       <button @click="fetchSessionToken" :disabled="!state.code" class="button">Fetch session token</button>
     </div>
 

@@ -19,9 +19,17 @@
 
     <article class="prose">
       <h3>Sites</h3>
+      <p class="text-slate-500 ml-4">
+        <div class="text-purple-500"><span>?sessionToken=</span><input v-model="sessionToken" type="text" class="text-xs p-0" /></div>
+        <div v-if="sessionToken">
+          Your session token is attached to URLs below.<br />
+          You should not share the URLs with others, but bookmark them if you would like to access easily next time for your own use 👍
+        </div>
+      </p>
       <ul>
         <li>
-          <a href="https://battles.splat.report">battles</a>
+          <a :href="withSessionTokenQuery('https://battles.splat.report/x-battles')" target="_blank">battles.splat.report/x-battles<span v-if="sessionToken" class="opacity-50">?sessionToken=...</span> <span class="!text-[1rem] material-symbols-outlined"
+            @click="copyToken">tab</span></a>
         </li>
       </ul>
     </article>
@@ -56,5 +64,15 @@ async function copyToken() {
   if (elem) {
     document.getSelection()?.setBaseAndExtent(elem, 0, elem, elem.childNodes.length)
   }
+}
+
+function withSessionTokenQuery(url: string) {
+  const token = sessionToken.value;
+  if (!token) {
+    return url;
+  }
+  const u = new URL(url);
+  u.searchParams.set('sessionToken', token);
+  return u.toString();
 }
 </script>
